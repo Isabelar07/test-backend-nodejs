@@ -1,6 +1,6 @@
 import { UserDataBase } from "../data/UserDataBase";
 import { CustomError } from "../error/CustomError";
-import { SignupInputDTO } from "../model/User";
+import { LoginInputDTO, SignupInputDTO } from "../model/User";
 import { Authenticator } from "../services/Authenticator";
 import { HashManager } from "../services/HasManager";
 import { IdGenerator } from "../services/IdGenerator";
@@ -51,5 +51,40 @@ export class UserBusiness {
         } catch (error) {
             throw new CustomError(400, error.message)
         }
-}
+    }
+
+    async getUserByEmail(user: LoginInputDTO) {
+
+        try {
+
+            if(!user.email || !user.password) {
+                throw new CustomError(404, 'enter "email" or "nickname" and "password"')
+            }
+            
+    
+            const userFromDB = await this.userDataBase.selectUserByEmail(user.email);
+    
+            if(!userFromDB) {
+                throw new CustomError(406, "user does not exist")
+            }
+    
+            const passwordIsCorrect = await this.hashManager.compare(
+                user.password,
+                userFromDB.password
+            )
+    
+            if (!passwordIsCorrect) {
+                throw new CustomError(401, "Invalid password")
+            }
+    
+            const acessToken = this.authenticator.generateToken({
+                id: userFromDB.id
+            })
+    
+            return acessToken
+
+        } catch (error) {
+            throw new CustomError(400,error.message);
+        }
+    }
 }

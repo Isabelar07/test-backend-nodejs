@@ -22,4 +22,18 @@ export class UserDataBase extends BaseDataBase {
             throw new CustomError(500, error.message)
         }
     }
+
+    public async selectUserByEmail(email: string):  Promise<User> {
+        try {
+            const result = await BaseDataBase.connection
+            .select("*")
+            .from(UserDataBase.TABLE_NAME)
+            .where({ email });
+
+            return User.toUserModel(result[0]);
+            
+        } catch (error) {
+            throw new CustomError(500, error.message)
+        }
+    }   
 }
