@@ -48,7 +48,7 @@ o projeto foi desenvolvido usando as seguintes tecnologias:
 - [Node.js](https://nodejs.org/pt-br/docs/)
 - [Express.js](http://expressjs.com/pt-br/)
 - [Knex](http://knexjs.org/)
-- Typescript
+- [Typescript](https://www.typescriptlang.org/pt/docs/)
 - Cors
 - MySQL
 - UUID
