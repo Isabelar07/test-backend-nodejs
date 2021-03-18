@@ -10,6 +10,8 @@ import { CategoryBusiness } from "./CategoryBusiness"
 
 export class ProductBusiness {
 
+    //createProduct é o responsável por fazer as validações de input, gerar o id do produto e pegar o id do usuário para relacionar com o produto, sendo permitido cadastrar um produto somente se fizer login.
+
     async createProduct(product: ProductInputDTO, token: string): Promise<void> {
 
         try {

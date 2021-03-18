@@ -15,6 +15,8 @@ const userBusiness = new UserBusiness(
 
 export class UserController {
 
+    //signup controla as entradas (name, email e password) da requisição
+
     async signup(req: Request, res: Response){
         try {
 
@@ -34,6 +36,7 @@ export class UserController {
 
         }
 
+        //login controla as entradas (email e password) da requisição
         async login(req: Request, res: Response) {
 
             try {

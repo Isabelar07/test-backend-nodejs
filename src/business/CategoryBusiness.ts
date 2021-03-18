@@ -6,6 +6,8 @@ import { IdGenerator } from "../services/IdGenerator";
 
 export class CategoryBusiness {
 
+    // Só é possível criar uma categoria se estiver logado, sendo assim, o create é responsável por conferir se o usuário está logado, se está inserindo a categoria e gerar o id da categoria.
+
     async create(category: string, token: string): Promise<void> {
 
         try {
@@ -36,6 +38,8 @@ export class CategoryBusiness {
             throw new CustomError(400, error.message);
         }
     } 
+
+    // getCategory verifica se o usuário está logado para retornar as categorias.
 
     async getCategory(token: string): Promise<Category[]> {
 

@@ -3,6 +3,8 @@ import { CategoryBusiness } from "../business/CategoryBusiness";
 
 export class CategoryController {
 
+    // createCategory controla as entradas (category e token) da requisição
+
     async createCategory(req: Request, res: Response) {
 
         try {
@@ -20,6 +22,8 @@ export class CategoryController {
             res.status(error.statusCode).send({ error: error.message });
         }
     }
+
+    // getCategory controla a entrada (token) da requisição
 
     async getCategory(req: Request, res: Response){
         try {

@@ -4,6 +4,8 @@ import { ProductInputDTO } from "../model/Product";
 
 export class ProductController {
 
+    //createProduct controla as entradas(title, description, price e category) da requisição
+
     async createProduct(req: Request, res: Response) {
 
         try {

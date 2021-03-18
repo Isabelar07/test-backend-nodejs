@@ -14,6 +14,8 @@ export class UserBusiness {
         private userDataBase: UserDataBase,
     ) {}
 
+    // o createUser é o responsável por conferir se o usuário está preenchendo o nome, email e senha, verificar se o email tem o @ e se a senha tem 6 ou mais caracteres, por gerar o Id do user, através do IdGenerator da pasta service. Criptografar a senha, através do hashmanager da pasta service e gerar um token, através do authenticator da pasta service.
+
     async createUser(input: SignupInputDTO) {
 
         try {
@@ -53,12 +55,14 @@ export class UserBusiness {
         }
     }
 
+    //  getUserByEmail é responsável por conferir se o usuário preencheu o email e a senha e verificar se o usuário realmente existe e gerar um token.
+
     async getUserByEmail(user: LoginInputDTO) {
 
         try {
 
             if(!user.email || !user.password) {
-                throw new CustomError(404, 'enter "email" or "nickname" and "password"')
+                throw new CustomError(404, 'enter "email" and "password"')
             }
             
     
