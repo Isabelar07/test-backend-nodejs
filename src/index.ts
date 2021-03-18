@@ -3,6 +3,7 @@ import cors from 'cors';
 import { AddressInfo } from "net";
 import { userRouter } from './routes/UserRouter';
 import { categoryRouter } from './routes/CategoryRouter';
+import { productRouter } from './routes/ProductRouter';
 
 const app: Express = express();
 
@@ -11,6 +12,7 @@ app.use(cors());
 
 app.use("/user", userRouter);
 app.use("/category", categoryRouter);
+app.use("/product", productRouter);
 
 
 const server = app.listen(process.env.PORT || 3003, () => {

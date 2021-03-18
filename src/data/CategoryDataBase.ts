@@ -21,4 +21,27 @@ export class CategoryDataBase extends BaseDataBase {
             throw new CustomError(500, error.message)
         }
     }
+
+    public async getCategory(): Promise<Category[]> {
+        try {
+
+            const result = await BaseDataBase.connection()
+            .select("*")
+            .from(CategoryDataBase.TABLE_NAME)
+
+            const categories: Category[] = []
+
+            for (let category of result) {
+                categories.push({
+                    id: category.id,
+                    category: category.category
+                })
+            }
+
+            return categories
+
+        } catch (error) {
+            throw new CustomError(500, error.message)
+        }
+    }
 }

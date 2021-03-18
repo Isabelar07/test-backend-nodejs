@@ -20,4 +20,19 @@ export class CategoryController {
             res.status(error.statusCode).send({ error: error.message });
         }
     }
+
+    async getCategory(req: Request, res: Response){
+        try {
+
+            const token = req.headers.authorization!;
+
+            const categoryBusiness = new CategoryBusiness();
+            const categories = await categoryBusiness.getCategory(token);
+
+            res.status(200).send({categories});
+            
+        } catch (error) {
+            res.status(error.statusCode).send({ error: error.message });
+        }
+    }
 }
