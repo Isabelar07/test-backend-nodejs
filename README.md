@@ -29,7 +29,7 @@ Eu, como usuário, gostaria de poder excluir um produto do meu catálogo;
 
 - Cadastrar usuário;
 - Fazer login;
-- Criar e pegar categoria;
+- Criar e listar categoria;
 - Cadastrar produtos
 
 ## Endpoints que ainda falta criar
