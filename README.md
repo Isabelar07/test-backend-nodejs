@@ -65,7 +65,7 @@ o projeto foi desenvolvido usando as seguintes tecnologias:
 git clone https://github.com/Isabelar07/test-backend-nodejs.git
 
 # Entrar no diretório
-cd cookenu-Backend-NodeJs
+cd test-backend-nodejs
 
 # Instalar as dependências
 yarn add
