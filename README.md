@@ -16,12 +16,12 @@ O teste tem como desafio desenvolver uma API, usando o Node.JS, para um aplicati
 
 Histórias de usuários:
 
-Como usuário eu gostaria de registrar um produto para que eu possa ter acesso aos dados deste produto no futuro (Título, descrição, preço, categoria)
-Eu, como usuário, gostaria de poder associar e editar uma categoria de produto;
-Como usuário, gostaria de poder acessar a lista de todos os produtos;
-Como usuário, gostaria de poder filtrar produtos por nome ou categoria;
-Eu, como usuário, gostaria de poder atualizar os dados do produto;
-Eu, como usuário, gostaria de poder excluir um produto do meu catálogo;
+- Como usuário eu gostaria de registrar um produto para que eu possa ter acesso aos dados deste produto no futuro (Título, descrição, preço, categoria)
+- Eu, como usuário, gostaria de poder associar e editar uma categoria de produto;
+- Como usuário, gostaria de poder acessar a lista de todos os produtos;
+- Como usuário, gostaria de poder filtrar produtos por nome ou categoria;
+- Eu, como usuário, gostaria de poder atualizar os dados do produto;
+- Eu, como usuário, gostaria de poder excluir um produto do meu catálogo;
 
 ---
 
