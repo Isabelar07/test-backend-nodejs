@@ -6,7 +6,7 @@
 
 - [Descrição](#-descrição-do-teste)
 - [Endpoints criados](#-endpoints-criados)
-- [Endpoints que ainda falta criar](#-endpoints-que-ainda-falta-criar)
+- [Endpoints que faltam criar](#-endpoints-que-faltam-criar)
 - [Tecnologias utilizadas](#-tecnologias-utilizadas)
 - [Instalação](#-como-baixar-o-projeto)
 
@@ -32,7 +32,9 @@ Histórias de usuários:
 - Criar e listar categoria;
 - Cadastrar produtos
 
-## Endpoints que ainda falta criar
+obs: só é possível cadastrar os produtos, criar e ver as categorias se estiver logado
+
+## Endpoints que faltam criar
 
 - Lista de produtos;
 - Filtrar produtos por nome ou categoria;
