@@ -96,7 +96,7 @@ CREATE TABLE Test_Anotaai_Products (
     user_id VARCHAR(255) NOT NULL,
     title VARCHAR(255) NOT NULL,
     description VARCHAR(255) NOT NULL,
-    price VARCHAR(255) NOT NULL,
+    price FLOAT NOT NULL,
     FOREIGN KEY(user_id) REFERENCES Test_Anotaai_User(id) 
 );
 ```
